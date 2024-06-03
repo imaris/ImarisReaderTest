@@ -5,7 +5,7 @@ using namespace bpConverterTypes;
 
 
 template<typename TDataType>
-void ReadFile(const bpString& aInputFileName, bpSize aImageIndex, const bpReaderTypes::cReadOptions& aOptions)
+void ReadIms(const bpString& aInputFileName, bpSize aImageIndex, const bpReaderTypes::cReadOptions& aOptions)
 {
   // create Reader
   bpImageReader<TDataType>  vReader(aInputFileName, aImageIndex, aOptions);
@@ -87,16 +87,16 @@ int main(int argc, char* argv[])
   std::vector<tDataType> vDataTypes = GetFileImagesInformation(vInputFileName, vOptions.mSWMR);
   switch (vDataTypes[vImageIndex]) {
     case bpUInt8Type:
-      ReadFile<bpUInt8>(vInputFileName,vImageIndex, vOptions);
+      ReadIms<bpUInt8>(vInputFileName,vImageIndex, vOptions);
       break;
     case bpUInt16Type:
-      ReadFile<bpUInt16>(vInputFileName,vImageIndex, vOptions);
+      ReadIms<bpUInt16>(vInputFileName,vImageIndex, vOptions);
       break;
     case bpUInt32Type:
-      ReadFile<bpUInt32>(vInputFileName,vImageIndex, vOptions);
+      ReadIms<bpUInt32>(vInputFileName,vImageIndex, vOptions);
       break;
     case bpFloatType:
-      ReadFile<bpFloat>(vInputFileName,vImageIndex, vOptions);
+      ReadIms<bpFloat>(vInputFileName,vImageIndex, vOptions);
       break;
     default:
       throw "DataType not supported";
