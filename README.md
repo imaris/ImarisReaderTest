@@ -11,7 +11,7 @@ Test project for ImarisReader library.
 
 - C++ test program
 
-  To build with CMake, copy the ImarisReader library to the ImarisReaderTest folder then run the following commands:
+  To build with CMake, copy the ImarisReader library and ImarisReader/interface to the ImarisReaderTest folder then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
@@ -25,7 +25,7 @@ Test project for ImarisReader library.
   ```
 - C test program
   
-  To build with CMake, copy the ImarisReader library to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
+  To build with CMake, copy the ImarisReader library and ImarisReader/interfaceC to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
