@@ -11,28 +11,28 @@ Test project for ImarisReader library.
 
 - C++ test program
 
-  To build and run with CMake, copy the ImarisReader library to the ImarisReaderTest folder then run the following commands:
+  To build with CMake, copy the ImarisReader library to the ImarisReaderTest folder then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
-  make
-  ./ImarisReaderTest
   ```
-  Alternatively, build using g++/clang++. For example, on macOS:
+  On Windows, the generated solution files can be opened and compiled with Visual Studio, while on Mac the generated Makefile can be compiled with ```make```. The Visual Studio version should be specified according to the setup of the other libraries, e.g. adding ```-G "Visual Studio 14 Win64"```.
+  
+  Alternatively, build and run using g++/clang++. For example, on macOS:
   ```bash
   clang++ -arch arm64 -std=c++11 -o cppTest cppReaderTest.cpp -I<parent_dir_of_ImarisReader> -L<dir_of_ImarisReader_dylib> -lbpImarisReader
   ./cppTest
   ```
 - C test program
   
-  To build and run with CMake, copy the ImarisReader library to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
+  To build with CMake, copy the ImarisReader library to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
-  make
-  ./ImarisReaderTest
   ```
-  Alternatively, build using g++/clang++. For example, on macOS:
+  On Windows, the generated solution files can be opened and compiled with Visual Studio, while on Mac the generated Makefile can be compiled with ```make```. The Visual Studio version should be specified according to the setup of the other libraries, e.g. adding ```-G "Visual Studio 14 Win64"```.
+  
+  Alternatively, build and run using g++/clang++. For example, on macOS:
   ```bash
   clang++ -arch arm64 -std=c++11 -o cTest cReaderTest.c -I<parent_dir_of_ImarisReader> -L<dir_of_ImarisReader_dylib> -lbpImarisReader
   ./cTest
