@@ -10,15 +10,29 @@ Test project for ImarisReader library.
 ### Build and Run
 
 - C++ test program
-  
-  On macOS:
+
+  To build and run with CMake, copy the ImarisReader library to the ImarisReaderTest folder then run the following commands:
+  ```bash
+  cd ImarisReaderTest
+  cmake .
+  make
+  ./ImarisReaderTest
+  ```
+  Alternatively, build using g++/clang++. For example, on macOS:
   ```bash
   clang++ -arch arm64 -std=c++11 -o cppTest cppReaderTest.cpp -I<parent_dir_of_ImarisReader> -L<dir_of_ImarisReader_dylib> -lbpImarisReader
   ./cppTest
   ```
 - C test program
   
-  On macOS:
+  To build and run with CMake, copy the ImarisReader library to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
+  ```bash
+  cd ImarisReaderTest
+  cmake .
+  make
+  ./ImarisReaderTest
+  ```
+  Alternatively, build using g++/clang++. For example, on macOS:
   ```bash
   clang++ -arch arm64 -std=c++11 -o cTest cReaderTest.c -I<parent_dir_of_ImarisReader> -L<dir_of_ImarisReader_dylib> -lbpImarisReader
   ./cTest
