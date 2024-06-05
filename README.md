@@ -11,7 +11,7 @@ Test project for ImarisReader library.
 
 - C++ test program
 
-  To build with CMake, copy the ImarisReader library and ImarisReader/interface to the ImarisReaderTest folder then run the following commands:
+  To build with CMake, copy the ImarisReader binary and ImarisReader/interface to the ImarisReaderTest folder then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
@@ -25,7 +25,7 @@ Test project for ImarisReader library.
   ```
 - C test program
   
-  To build with CMake, copy the ImarisReader library and ImarisReader/interfaceC to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
+  To build with CMake, copy the ImarisReader binary and ImarisReader/interfaceC to the ImarisReaderTest folder. Modify the CMakeLists.txt file: change ```add_executable(ImarisReaderTest cppReaderTest.cpp)``` to ```add_executable(ImarisReaderTest cReaderTest.c)``` and uncomment ```set_source_files_properties(cReaderTest.c PROPERTIES LANGUAGE CXX)```. Then run the following commands:
   ```bash
   cd ImarisReaderTest
   cmake .
@@ -39,7 +39,7 @@ Test project for ImarisReader library.
   ```
 - Java test program
   
-  Move the ImarisReader executable and the Java interface (ImarisReader/java/JavaImarisReader/jImarisReader.java) to the folder containing javaReaderTest.java, then run:
+  Move the ImarisReader binary and the Java interface (ImarisReader/java/JavaImarisReader/jImarisReader.java) to the folder containing javaReaderTest.java, then run:
   ```bash
   export CLASSPATH=${CLASSPATH}:/path/to/jna-5.14.0.jar
   javac javaReaderTest.java
@@ -47,7 +47,7 @@ Test project for ImarisReader library.
   ```
 - Python test program
   
-  Move the ImarisReader executable and the Python interface (ImarisReader/python/PyImarisReader/PyImarisReader.py) to the folder containing pythonReaderTest.py, then run:
+  Move the ImarisReader binary and the Python interface (ImarisReader/python/PyImarisReader/PyImarisReader.py) to the folder containing pythonReaderTest.py, then run:
   ```bash
   python3 pythonReaderTest.py
   ```
