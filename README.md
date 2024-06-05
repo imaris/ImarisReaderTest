@@ -5,7 +5,7 @@ Test project for ImarisReader library.
 ### Dependencies
 
 1. ImarisReader: https://github.com/imaris/ImarisReader
-2. For use with Java only, Java Native Access library, version >= 5.14.0: https://github.com/java-native-access/jna
+2. For use with Java, Java Native Access library, version >= 5.14.0: https://github.com/java-native-access/jna
 
 ### Build and Run
 
