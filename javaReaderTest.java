@@ -43,13 +43,13 @@ public class javaReaderTest {
         jImarisReader.bpReaderTypesC_IndexTCR vIndex = new jImarisReader.bpReaderTypesC_IndexTCR(0, 1, 1);
         jImarisReader.bpReaderTypesC_Histogram vHistogram = vReader.ReadHistogram(vIndex);
         int vHistogramValueIndex = 5;
-        long[] vHistogramValues = vHistogram.mBins.getLongArray(0, (vHistogram.mBinsSize - 1) * Native.getNativeSize(Long.TYPE));
+        long[] vHistogramValues = vHistogram.mBins.getLongArray(0, vHistogram.mBinsSize * Native.getNativeSize(Long.TYPE));
         System.out.println(vHistogramValues[vHistogramValueIndex]);
 
         // read thumbnail
         int vThumbnailValueIndex = 1024*30;
         jImarisReader.bpReaderTypesC_Thumbnail vThumbnail = vReader.ReadThumbnail();
-        byte[] vThumbnailValues = vThumbnail.mInterleavedRGBA.getByteArray(0, (vThumbnail.mInterleavedRGBASize - 1) * Native.getNativeSize(Byte.TYPE));
+        byte[] vThumbnailValues = vThumbnail.mInterleavedRGBA.getByteArray(0, vThumbnail.mInterleavedRGBASize * Native.getNativeSize(Byte.TYPE));
         System.out.println(vThumbnailValues[vThumbnailValueIndex]);
 
         vReader.Destroy();
